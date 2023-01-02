@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPlayer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Share Tech Mono', monospace;
+        }
+        #HeadPage{
+            perspective: 1000px;
+            transition: linear 1s;
+        }
+        /*@keyframes test{
+            0%  {transform: rotateY(0deg);}
+            25% {transform: rotateY(90deg);}
+            50% {transform: rotateY(180deg);}
+            75% {transform: rotateY(270deg);}
+            100% {transform: rotateY(360deg);}
+        }*/
+        #title{
+            transform: rotateY(-45deg);
+            font-weight: bold;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2em;
+            width: 300px;
+            height: 100px;
+            margin-top: 45px;
+            margin-right: 10%;
+            margin-left: auto;
+            transition: linear 0.2s;
+            transform-origin: right;
+        }
+        .Options{
+            transition: linear 0.2s;
+            width: 200px;
+            height: 100px;
+            margin-top: 45px;
+            margin-right: 7.5%;
+            margin-left: auto;
+        }
+        .Options > button{
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 1.5em;
+            font-family: 'Share Tech Mono', monospace;
+        }
+        .Options > button:hover{
+            transform: rotateY(-45deg);
+        }
+        #About{
+            transform: rotateY(90deg);
+            transition: linear 1s;
+            transform-origin: right;
+            perspective: 1000px;
+        }
+        .star{
+            height:2px;
+            width:2px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 1px 1px 1px rgb(0, 190, 253);
+        }
+
+        /*#stars:nth-child(calc (n mod 1000)){
+            
+        }*/
+        /*canvas{
+            position: absolute;
+            left:auto;
+            width:500px;
+            height:500px;
+            background-color: white;
+        }*/
+    </style>
+</head>
+<canvas></canvas>
+<div id="stars">
+    <script src="indexCode.js"></script>
+</div>
+<body>
+<div id="HeadPage">
+    <div id="title">
+        Joshua Krymgold's Website
+    </div>
+    <div class="Options">
+        <button onclick="document.getElementById('About').style='transform: rotateY(0deg);'; document.getElementById('HeadPage').style='transform: rotateY(-90deg);'">
+            about
+        </button>
+        <button>
+            Projects
+        </button>
+        <button>
+            Music Player
+        </button>
+    </div>
+</div>
+    <div id="About">
+        <div>My name is Joshua Krymgold. I am a freshmen at the University of Pittsburgh studying Computer Science.</div>
+        <img>Insert image here</img>
+        <div>Some of my hobbies include:</div>
+        <ul>
+            <li>Programming(Kind of Obvious)</li>
+            <li>Playing Piano</li>
+            <li>Playing Video Games
+                <img>insert Witcher 3 image here</img>
+            </li>
+            <li>Weightlifting</li>
+        </ul>
+    </div>
+</body>
+</html>
